@@ -1,6 +1,7 @@
 require("@nomiclabs/hardhat-waffle");
 require('@openzeppelin/hardhat-upgrades');
 require("@nomiclabs/hardhat-etherscan");
+require('dotenv').config()
 
 
 
@@ -26,8 +27,8 @@ module.exports = {
     hardhat: {
     },
     rinkeby: {
-      url: "",
-      accounts: [""]
+      url: "process.env.infura_api",
+      accounts: ["process.env.privatekey"]
     }
   },
   solidity: "0.8.2",
